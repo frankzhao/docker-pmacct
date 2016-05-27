@@ -12,9 +12,6 @@ build:
 run:
 	@docker run -it -d -p 6343:6343/udp -p 5678:5678 --name $(NAME) $(TAG)
 
-client:
-	@docker exec -it $(NAME) /root/initclient.sh
-
 shell:
 	@docker exec -it $(NAME) bash
 
