@@ -10,7 +10,7 @@ build:
 	@docker build -t $(TAG) $(ROOT)
 
 run:
-	@docker run -it -d -p 6343:6343 -p 5678:5678 --name $(NAME) $(TAG)
+	@docker run -it -d -p 6343:6343/udp -p 5678:5678 --name $(NAME) $(TAG)
 
 client:
 	@docker exec -it $(NAME) /root/initclient.sh

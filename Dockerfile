@@ -14,5 +14,5 @@ RUN git clone https://github.com/pmacct/pmacct \
     && make -j4 \
     && make install
 
-EXPOSE 6343 5678
+EXPOSE 6343/udp 5678
 CMD ["bash"]
